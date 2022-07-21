@@ -1,0 +1,9 @@
+import re
+
+teks = re.sub(r'@[A-Za-z0-9]+', '', teks) #remove mention
+teks = re.sub(r#[A-Za-z0-9]+', '', teks) #remove hastag
+teks = re.sub(r'RT[\s]+', '', teks) #remove RT
+teks = re.sub(r'http\s+', '', teks) #remove Link
+teks = re.sub(r'^\s*b\s+', '', teks) #remove 2 words
+teks = re.sub(r'[0-9]+', '', teks) #remove Number
+teks = re.sub(r'(x[^\s])*', '', teks) #remove x lebih dari 1
